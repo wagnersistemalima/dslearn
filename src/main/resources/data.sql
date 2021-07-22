@@ -19,3 +19,8 @@ INSERT INTO tb_course (name, img_uri, img_Gray_Uri) VALUES ('BootCamp Kotlin', '
 
 INSERT INTO tb_offer (edition, star_Moment, end_Moment, course_id) VALUES ('1.0', TIMESTAMP WITH TIME ZONE '2021-12-13T03:00:00.12345Z', TIMESTAMP WITH TIME ZONE '2022-12-13T03:00:00.12345Z', 1)
 INSERT INTO tb_offer (edition, star_Moment, end_Moment, course_id) VALUES ('2.0', TIMESTAMP WITH TIME ZONE '2021-12-13T03:00:00.12345Z', TIMESTAMP WITH TIME ZONE '2022-12-13T03:00:00.12345Z', 1)
+
+
+INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Trilha html', 'Trilha principal do curso', 1, 'https://cdn.pixabay.com/photo/2018/02/27/10/49/training-3185170_1280.jpg', 1, 1)
+INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Forum', 'Tire suas duvidas', 2, 'https://cdn.pixabay.com/photo/2018/02/27/10/49/training-3185170_1280.jpg', 2, 1)
+INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Lives', 'Lives exclusivas para a turma', 3, 'https://cdn.pixabay.com/photo/2018/02/27/10/49/training-3185170_1280.jpg', 0, 1)

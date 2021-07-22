@@ -1,6 +1,7 @@
 package com.br.wagner.dslearn.offer.model
 
 import com.br.wagner.dslearn.course.model.Course
+import com.br.wagner.dslearn.resource.model.Resource
 import java.time.Instant
 import javax.persistence.*
 
@@ -19,4 +20,9 @@ class Offer(
     @field:Id
     @field:GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null
+
+    // associação com resource
+
+    @field:OneToMany(mappedBy = "offer")        // uma oferta pode conter varios resources
+    val resources: List<Resource> = listOf()
 }

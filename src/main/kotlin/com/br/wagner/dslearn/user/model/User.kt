@@ -1,5 +1,6 @@
 package com.br.wagner.dslearn.user.model
 
+import com.br.wagner.dslearn.notifications.model.Notification
 import com.br.wagner.dslearn.roles.model.Role
 import javax.persistence.*
 
@@ -18,4 +19,8 @@ class User(
 
     @field:ManyToMany(fetch = FetchType.EAGER)
     val roles: Set<Role> = hashSetOf()
+
+    @field:OneToMany(mappedBy = "user")        // associação um usuario pode ter varias notificaçoes
+    val notifications: Set<Notification> = hashSetOf()
+
 }
