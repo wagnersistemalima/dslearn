@@ -1,6 +1,7 @@
 package com.br.wagner.dslearn.resource.model
 
 import com.br.wagner.dslearn.offer.model.Offer
+import com.br.wagner.dslearn.section.model.Section
 import javax.persistence.*
 
 @Entity
@@ -22,4 +23,9 @@ class Resource(
     @field:Id
     @field:GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null
+
+    // associação um resource pode ter varias sections esta
+    @field:OneToMany(mappedBy = "resource")
+    val sections: List<Section> = listOf()
+
 }
